@@ -18,6 +18,16 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Added to contain the frame */
+        }
+        .frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 20px solid #f9e5d4; /* Adjust frame color */
+            border-radius: 10px;
         }
         h1, p {
             text-align: center;
@@ -45,13 +55,19 @@
         .contact-info {
             font-style: italic;
         }
+        .image-placeholder {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="frame"></div> <!-- Art frame -->
         <h1>Wedding Invitation</h1>
         <p>You're cordially invited to celebrate the union of</p>
-        <h2>Dalia Poussin & Loïc Remoussenard</h2>
+        <h2>Dalia & Loïc</h2>
         <div class="invitation-details">
             <p><span class="date-time">Date:</span> Saturday, June 20th, 2024</p>
             <p><span class="date-time">Time:</span> 4:00 PM</p>
@@ -62,6 +78,7 @@
             <p>Please RSVP by June 1st, 2024</p>
             <p class="contact-info">Contact: John & Jane at johnjane@example.com or (123) 456-7890</p>
         </div>
+        <img class="image-placeholder" src="https://via.placeholder.com/600x400" alt="Art Frame Placeholder">
     </div>
 </body>
 </html>
