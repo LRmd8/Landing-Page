@@ -6,32 +6,37 @@
     <title>Wedding Invitation</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Palatino, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f3f3;
         }
         .container {
-            max-width: 800px;
+            position: relative;
+            width: 800px; /* Set the width */
+            height: 1400px; /* Set the height */
             margin: 20px auto;
-            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            background-image: url('Background.png');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative; /* Added to contain the frame */
-        }
-        .frame {
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+            margin-top: 60px; /* Define top margin */
             position: absolute;
             top: 0;
-            left: 0;
+            left: 30px;
             right: 0;
             bottom: 0;
-            border: 20px solid #f9e5d4; /* Adjust frame color */
-            border-radius: 10px;
         }
         h1 {
             font-family: 'Snell Roundhand', cursive;
-            font-size: 36px;
+            font-size: 54px;
             font-weight: bold;
             color: #333;
             text-align: center;
@@ -42,7 +47,9 @@
         }
         h2 {
             text-align: center;
-            margin-top: 10px; /* Adjust margin as needed */
+            font-family: cursive;
+            font-size: 24px;
+            margin-top: 20px; /* Adjust margin as needed */
         }
         .invitation-details {
             margin-top: 30px;
@@ -67,30 +74,29 @@
         .contact-info {
             font-style: italic;
         }
-        .image-placeholder {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="frame"></div> <!-- Art frame -->
-        <h1>Wedding Invitation</h1>
-        <p>You're cordially invited to celebrate the union of</p>
-        <h2>DM & LL</h2>
-        <div class="invitation-details">
-            <p><span class="date-time">Date:</span> Saturday, June 20th, 2024</p>
-            <p><span class="date-time">Time:</span> 4:00 PM</p>
-            <p><span class="location">Location:</span> The Grand Ballroom, XYZ Hotel</p>
-            <p>123 Main Street, Cityville</p>
+        <div class="content">
+            <h1>Wedding Invitation</h1>
+            <p>You're cordially invited to celebrate the union of</p>
+            <h2>Dalia Poussin & Loïc Remoussenard</h2>
+            <div class="invitation-details">
+                <p><span class="date-time">Date:</span> Friday, May 10th, 2024</p>
+                <p><span class="date-time">Time:</span> 10:00 AM</p>
+                <p><span class="location">Location:</span> Central Park</p>
+                <p>New York City</p>
+            </div>
+            <div class="RSVP">
+                <p class="contact-info">Contact: Us</p>
+            </div>
         </div>
-        <div class="RSVP">
-            <p>Please RSVP by June 1st, 2024</p>
-            <p class="contact-info">Contact: WeddingDMLL@gmail.com</p>
-        </div>
-        <img class="image-placeholder" src="Picture1.jpg" alt="Art Frame Placeholder">
     </div>
+    <script>
+        setTimeout(function() {
+            document.querySelector('.container').style.backgroundImage = "url('Background2.png')";
+        }, 10000); // Change background after 30 seconds (30000 milliseconds)
+    </script>
 </body>
 </html>
